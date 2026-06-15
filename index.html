@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Nikki Gaucher Math Resources</title>
 
   <style>
@@ -67,7 +68,8 @@
       position: relative;
     }
 
-    input, select {
+    input,
+    select {
       padding: 12px;
       border: 1px solid #ccc;
       border-radius: 10px;
@@ -106,13 +108,6 @@
 
     .card:hover {
       transform: translateY(-5px);
-    }
-
-    .card img {
-      width: 100%;
-      height: 165px;
-      object-fit: cover;
-      background: #ddd;
     }
 
     .placeholder-img {
@@ -190,162 +185,180 @@
 
 <body>
 
-<header>
-  <h1>Nikki Gaucher Math Resources</h1>
-  <p class="subtitle">Free Standards-Aligned Math Resources for Grades 6–8</p>
-  <p class="counts">Interactive Games • Worksheets • MCAS Review • Classroom Activities</p>
+  <header>
+    <h1>Nikki Gaucher Math Resources</h1>
+    <p class="subtitle">Free Standards-Aligned Math Resources for Grades 6–8</p>
+    <p class="counts">Interactive Games • Worksheets • MCAS Review • Classroom Activities</p>
 
-  <div class="hero-buttons">
-    <a href="#games">Games</a>
-    <a href="#worksheets">Worksheets</a>
-    <a href="#mcas">MCAS Review</a>
-    <a href="#about">About</a>
-  </div>
-</header>
-
-<main class="container">
-
-  <section class="search-filter-box">
-    <input type="text" id="searchInput" placeholder="Search by title, topic, or standard..." />
-
-    <select id="gradeFilter">
-      <option value="all">All Grades</option>
-      <option value="6">Grade 6</option>
-      <option value="7">Grade 7</option>
-      <option value="8">Grade 8</option>
-    </select>
-
-    <select id="standardFilter">
-      <option value="all">All Standards</option>
-      <option value="7.EE.B.4">7.EE.B.4</option>
-      <option value="7.SP.C.8">7.SP.C.8</option>
-      <option value="7.RP.A.2">7.RP.A.2</option>
-      <option value="8.G.C.9">8.G.C.9</option>
-    </select>
-
-    <select id="typeFilter">
-      <option value="all">All Types</option>
-      <option value="jeopardy">Jeopardy</option>
-      <option value="worksheet">Worksheet</option>
-      <option value="app">Practice App</option>
-      <option value="mcas">MCAS Review</option>
-    </select>
-  </section>
-
-  <h2 class="section-title" id="games">Featured Games</h2>
-
-  <section class="card-grid" id="resourceGrid">
-
-    <div class="card" data-grade="7" data-standard="7.EE.B.4" data-type="jeopardy">
-      <div class="placeholder-img">Exponent Rules Jeopardy Screenshot</div>
-      <div class="card-content">
-        <h2>Exponent Rules Jeopardy</h2>
-        <div>
-          <span class="tag">Grade 7</span>
-          <span class="tag">7.EE.B.4</span>
-          <span class="tag">Jeopardy</span>
-        </div>
-        <p>Whole-class review game for product rule, quotient rule, and power of a power.</p>
-        <a class="button" href="https://gauchernwems.github.io/JeopardyExponentRules/" target="_blank">Play Game</a>
-      </div>
+    <div class="hero-buttons">
+      <a href="#games">Games</a>
+      <a href="#worksheets">Worksheets</a>
+      <a href="#mcas">MCAS Review</a>
+      <a href="#about">About</a>
     </div>
+  </header>
 
-    <div class="card" data-grade="7" data-standard="7.SP.C.8" data-type="jeopardy">
-      <div class="placeholder-img">Probability Jeopardy Screenshot</div>
-      <div class="card-content">
-        <h2>Probability Jeopardy</h2>
-        <div>
-          <span class="tag">Grade 7</span>
-          <span class="tag">7.SP.C.8</span>
-          <span class="tag">Jeopardy</span>
+  <main class="container">
+
+    <section class="search-filter-box">
+      <input type="text" id="searchInput" placeholder="Search by title, topic, or standard..." />
+
+      <select id="gradeFilter">
+        <option value="all">All Grades</option>
+        <option value="6">Grade 6</option>
+        <option value="7">Grade 7</option>
+        <option value="8">Grade 8</option>
+      </select>
+
+      <select id="standardFilter">
+        <option value="all">All Standards</option>
+        <option value="multiple">Multiple Standards</option>
+        <option value="7.EE.B.4">7.EE.B.4</option>
+        <option value="7.SP.C.8">7.SP.C.8</option>
+        <option value="7.RP.A.2">7.RP.A.2</option>
+        <option value="8.EE.A.1">8.EE.A.1</option>
+        <option value="8.G.C.9">8.G.C.9</option>
+      </select>
+
+      <select id="typeFilter">
+        <option value="all">All Types</option>
+        <option value="jeopardy">Jeopardy</option>
+        <option value="game">Game</option>
+        <option value="worksheet">Worksheet</option>
+        <option value="app">Practice App</option>
+        <option value="mcas">MCAS Review</option>
+      </select>
+    </section>
+
+    <h2 class="section-title" id="games">Featured Resources</h2>
+
+    <section class="card-grid" id="resourceGrid">
+
+      <div class="card" data-grade="7" data-standard="multiple" data-type="jeopardy">
+        <div class="placeholder-img">MCAS Review Jeopardy Screenshot</div>
+        <div class="card-content">
+          <h2>MCAS Review Jeopardy</h2>
+          <div>
+            <span class="tag">Grade 7</span>
+            <span class="tag">Multiple Standards</span>
+            <span class="tag">Jeopardy</span>
+            <span class="tag">MCAS Review</span>
+          </div>
+          <p>Whole-class Jeopardy review game for 7th grade MCAS preparation.</p>
+          <a class="button" href="https://gauchernwems.github.io/Jeopardy2025-6/" target="_blank">Play Game</a>
         </div>
-        <p>Review compound probability, sample spaces, and multi-step probability questions.</p>
-        <a class="button" href="#" target="_blank">Play Game</a>
       </div>
-    </div>
 
-    <div class="card" data-grade="7" data-standard="7.EE.B.4" data-type="worksheet" id="worksheets">
-      <div class="placeholder-img">Exponent Partner Worksheet Screenshot</div>
-      <div class="card-content">
-        <h2>Exponent Partner Worksheet</h2>
-        <div>
-          <span class="tag">Grade 7</span>
-          <span class="tag">7.EE.B.4</span>
-          <span class="tag">Worksheet</span>
+      <div class="card" data-grade="7" data-standard="multiple" data-type="game">
+        <div class="placeholder-img">Snake MCAS Review Screenshot</div>
+        <div class="card-content">
+          <h2>Snake MCAS Review</h2>
+          <div>
+            <span class="tag">Grade 7</span>
+            <span class="tag">Multiple Standards</span>
+            <span class="tag">Game</span>
+            <span class="tag">MCAS Review</span>
+          </div>
+          <p>Snake-style review game for practicing 7th grade MCAS questions.</p>
+          <a class="button" href="https://gauchernwems.github.io/snake2/" target="_blank">Play Game</a>
         </div>
-        <p>Partner A and Partner B worksheet where each row gives equivalent answers.</p>
-        <a class="button" href="#" target="_blank">Download</a>
       </div>
-    </div>
 
-    <div class="card" data-grade="7" data-standard="7.RP.A.2" data-type="mcas" id="mcas">
-      <div class="placeholder-img">Percent Review Screenshot</div>
-      <div class="card-content">
-        <h2>Percent Review</h2>
-        <div>
-          <span class="tag">Grade 7</span>
-          <span class="tag">7.RP.A.2</span>
-          <span class="tag">MCAS Review</span>
+      <div class="card" data-grade="7" data-standard="multiple" data-type="game">
+        <div class="placeholder-img">Subway Surfers MCAS Review Screenshot</div>
+        <div class="card-content">
+          <h2>Subway Surfers MCAS Review</h2>
+          <div>
+            <span class="tag">Grade 7</span>
+            <span class="tag">Multiple Standards</span>
+            <span class="tag">Game</span>
+            <span class="tag">MCAS Review</span>
+          </div>
+          <p>Subway Surfers-style review game for 7th grade MCAS practice.</p>
+          <a class="button" href="https://gauchernwems.github.io/SubwaySurfersReview/" target="_blank">Play Game</a>
         </div>
-        <p>Practice with percent increase, percent decrease, discounts, and real-world problems.</p>
-        <a class="button" href="#" target="_blank">Open Resource</a>
       </div>
-    </div>
 
-  </section>
+      <div class="card" data-grade="8" data-standard="8.EE.A.1" data-type="worksheet" id="worksheets">
+        <div class="placeholder-img">Exponent Partner Worksheet Screenshot</div>
+        <div class="card-content">
+          <h2>Exponent Partner Worksheet</h2>
+          <div>
+            <span class="tag">Grade 8</span>
+            <span class="tag">8.EE.A.1</span>
+            <span class="tag">Worksheet</span>
+          </div>
+          <p>Partner worksheet for practicing properties of integer exponents.</p>
+          <a class="button" href="https://docs.google.com/document/d/1fKx0yCeclpn7aLBo3VHDRNCeFhdfiHb8mDLvHm58gQs/edit?usp=sharing" target="_blank">Open Worksheet</a>
+        </div>
+      </div>
 
-  <h2 class="section-title" id="about">About</h2>
+    </section>
 
-  <section class="about-box">
-    <p>
-      I’m a middle school math teacher in Massachusetts creating interactive games,
-      worksheets, MCAS review resources, and classroom activities aligned to
-      Massachusetts standards.
-    </p>
-  </section>
+    <h2 class="section-title" id="mcas">MCAS Review</h2>
 
-</main>
+    <section class="about-box">
+      <p>
+        This section includes interactive 7th grade MCAS review games designed for whole-class review,
+        independent practice, and test preparation.
+      </p>
+    </section>
 
-<footer>
-  © 2026 Nikki Gaucher Math Resources
-</footer>
+    <h2 class="section-title" id="about">About</h2>
 
-<script>
-  const searchInput = document.getElementById("searchInput");
-  const gradeFilter = document.getElementById("gradeFilter");
-  const standardFilter = document.getElementById("standardFilter");
-  const typeFilter = document.getElementById("typeFilter");
-  const cards = document.querySelectorAll(".card");
+    <section class="about-box">
+      <p>
+        I’m a middle school math teacher in Massachusetts creating interactive games,
+        worksheets, MCAS review resources, and classroom activities aligned to
+        Massachusetts standards.
+      </p>
+    </section>
 
-  function filterCards() {
-    const searchText = searchInput.value.toLowerCase();
-    const gradeValue = gradeFilter.value;
-    const standardValue = standardFilter.value;
-    const typeValue = typeFilter.value;
+  </main>
 
-    cards.forEach(card => {
-      const cardText = card.innerText.toLowerCase();
-      const grade = card.dataset.grade;
-      const standard = card.dataset.standard;
-      const type = card.dataset.type;
+  <footer>
+    © 2026 Nikki Gaucher Math Resources
+  </footer>
 
-      const matchesSearch = cardText.includes(searchText);
-      const matchesGrade = gradeValue === "all" || grade === gradeValue;
-      const matchesStandard = standardValue === "all" || standard === standardValue;
-      const matchesType = typeValue === "all" || type === typeValue;
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const gradeFilter = document.getElementById("gradeFilter");
+    const standardFilter = document.getElementById("standardFilter");
+    const typeFilter = document.getElementById("typeFilter");
+    const cards = document.querySelectorAll(".card");
 
-      card.style.display =
-        matchesSearch && matchesGrade && matchesStandard && matchesType
-          ? "flex"
-          : "none";
-    });
-  }
+    function filterCards() {
+      const searchText = searchInput.value.toLowerCase();
+      const gradeValue = gradeFilter.value;
+      const standardValue = standardFilter.value;
+      const typeValue = typeFilter.value;
 
-  searchInput.addEventListener("input", filterCards);
-  gradeFilter.addEventListener("change", filterCards);
-  standardFilter.addEventListener("change", filterCards);
-  typeFilter.addEventListener("change", filterCards);
-</script>
+      cards.forEach(card => {
+        const cardText = card.innerText.toLowerCase();
+        const grade = card.dataset.grade;
+        const standard = card.dataset.standard;
+        const type = card.dataset.type;
+
+        const matchesSearch = cardText.includes(searchText);
+        const matchesGrade = gradeValue === "all" || grade === gradeValue;
+        const matchesStandard = standardValue === "all" || standard === standardValue;
+        const matchesType =
+          typeValue === "all" ||
+          type === typeValue ||
+          (typeValue === "mcas" && cardText.includes("mcas"));
+
+        card.style.display =
+          matchesSearch && matchesGrade && matchesStandard && matchesType
+            ? "flex"
+            : "none";
+      });
+    }
+
+    searchInput.addEventListener("input", filterCards);
+    gradeFilter.addEventListener("change", filterCards);
+    standardFilter.addEventListener("change", filterCards);
+    typeFilter.addEventListener("change", filterCards);
+  </script>
 
 </body>
 </html>
