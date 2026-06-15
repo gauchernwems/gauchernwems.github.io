@@ -16,7 +16,7 @@
     header {
       background: linear-gradient(135deg, #1e3a8a, #7c3aed);
       color: white;
-      padding: 70px 20px;
+      padding: 80px 20px 95px;
       text-align: center;
     }
 
@@ -25,9 +25,31 @@
       margin: 0;
     }
 
-    header p {
-      font-size: 1.2rem;
+    header .subtitle {
+      font-size: 1.25rem;
+      margin-top: 14px;
+    }
+
+    header .counts {
       margin-top: 12px;
+      font-size: 1rem;
+      opacity: 0.95;
+    }
+
+    .hero-buttons {
+      margin-top: 25px;
+    }
+
+    .hero-buttons a {
+      display: inline-block;
+      margin: 6px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.18);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid rgba(255,255,255,0.35);
     }
 
     .container {
@@ -38,10 +60,10 @@
 
     .search-filter-box {
       background: white;
-      padding: 20px;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,.08);
-      margin-top: -45px;
+      padding: 24px;
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(0,0,0,.08);
+      margin-top: -70px;
       position: relative;
     }
 
@@ -54,15 +76,22 @@
     }
 
     input {
-      width: 95%;
-      max-width: 500px;
+      width: 100%;
+      max-width: none;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      margin-top: 45px;
+      font-size: 1.8rem;
     }
 
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
-      margin-top: 35px;
+      margin-top: 20px;
     }
 
     .card {
@@ -71,6 +100,8 @@
       overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,.08);
       transition: transform .2s;
+      display: flex;
+      flex-direction: column;
     }
 
     .card:hover {
@@ -79,13 +110,32 @@
 
     .card img {
       width: 100%;
-      height: 160px;
+      height: 165px;
       object-fit: cover;
       background: #ddd;
     }
 
+    .placeholder-img {
+      height: 165px;
+      background: linear-gradient(135deg, #dbeafe, #ede9fe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #1e3a8a;
+      text-align: center;
+      padding: 15px;
+    }
+
     .card-content {
       padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card h2 {
+      margin-top: 0;
     }
 
     .tag {
@@ -100,19 +150,40 @@
 
     .button {
       display: inline-block;
-      margin-top: 14px;
+      margin-top: auto;
       background: #1e3a8a;
       color: white;
       padding: 10px 14px;
       border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
+      align-self: flex-start;
+    }
+
+    .about-box {
+      background: white;
+      padding: 24px;
+      border-radius: 18px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.08);
+      margin-top: 20px;
+      line-height: 1.6;
     }
 
     footer {
       text-align: center;
       padding: 30px;
       color: #666;
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      select {
+        width: 100%;
+        box-sizing: border-box;
+      }
     }
   </style>
 </head>
@@ -121,15 +192,21 @@
 
 <header>
   <h1>Nikki Gaucher Math Resources</h1>
-  <p>Interactive Games • Worksheets • MCAS Review • Standards-Aligned Activities</p>
+  <p class="subtitle">Free Standards-Aligned Math Resources for Grades 6–8</p>
+  <p class="counts">Interactive Games • Worksheets • MCAS Review • Classroom Activities</p>
+
+  <div class="hero-buttons">
+    <a href="#games">Games</a>
+    <a href="#worksheets">Worksheets</a>
+    <a href="#mcas">MCAS Review</a>
+    <a href="#about">About</a>
+  </div>
 </header>
 
 <main class="container">
 
   <section class="search-filter-box">
     <input type="text" id="searchInput" placeholder="Search by title, topic, or standard..." />
-
-    <br />
 
     <select id="gradeFilter">
       <option value="all">All Grades</option>
@@ -155,56 +232,76 @@
     </select>
   </section>
 
+  <h2 class="section-title" id="games">Featured Games</h2>
+
   <section class="card-grid" id="resourceGrid">
 
     <div class="card" data-grade="7" data-standard="7.EE.B.4" data-type="jeopardy">
-      <img src="https://via.placeholder.com/600x350?text=Exponent+Rules+Jeopardy" alt="Exponent Rules Jeopardy screenshot">
+      <div class="placeholder-img">Exponent Rules Jeopardy Screenshot</div>
       <div class="card-content">
         <h2>Exponent Rules Jeopardy</h2>
-        <span class="tag">Grade 7</span>
-        <span class="tag">7.EE.B.4</span>
-        <span class="tag">Jeopardy</span>
+        <div>
+          <span class="tag">Grade 7</span>
+          <span class="tag">7.EE.B.4</span>
+          <span class="tag">Jeopardy</span>
+        </div>
         <p>Whole-class review game for product rule, quotient rule, and power of a power.</p>
         <a class="button" href="https://gauchernwems.github.io/JeopardyExponentRules/" target="_blank">Play Game</a>
       </div>
     </div>
 
     <div class="card" data-grade="7" data-standard="7.SP.C.8" data-type="jeopardy">
-      <img src="https://via.placeholder.com/600x350?text=Probability+Jeopardy" alt="Probability Jeopardy screenshot">
+      <div class="placeholder-img">Probability Jeopardy Screenshot</div>
       <div class="card-content">
         <h2>Probability Jeopardy</h2>
-        <span class="tag">Grade 7</span>
-        <span class="tag">7.SP.C.8</span>
-        <span class="tag">Jeopardy</span>
+        <div>
+          <span class="tag">Grade 7</span>
+          <span class="tag">7.SP.C.8</span>
+          <span class="tag">Jeopardy</span>
+        </div>
         <p>Review compound probability, sample spaces, and multi-step probability questions.</p>
         <a class="button" href="#" target="_blank">Play Game</a>
       </div>
     </div>
 
-    <div class="card" data-grade="7" data-standard="7.EE.B.4" data-type="worksheet">
-      <img src="https://via.placeholder.com/600x350?text=Exponent+Partner+Worksheet" alt="Exponent partner worksheet screenshot">
+    <div class="card" data-grade="7" data-standard="7.EE.B.4" data-type="worksheet" id="worksheets">
+      <div class="placeholder-img">Exponent Partner Worksheet Screenshot</div>
       <div class="card-content">
         <h2>Exponent Partner Worksheet</h2>
-        <span class="tag">Grade 7</span>
-        <span class="tag">7.EE.B.4</span>
-        <span class="tag">Worksheet</span>
+        <div>
+          <span class="tag">Grade 7</span>
+          <span class="tag">7.EE.B.4</span>
+          <span class="tag">Worksheet</span>
+        </div>
         <p>Partner A and Partner B worksheet where each row gives equivalent answers.</p>
         <a class="button" href="#" target="_blank">Download</a>
       </div>
     </div>
 
-    <div class="card" data-grade="7" data-standard="7.RP.A.2" data-type="mcas">
-      <img src="https://via.placeholder.com/600x350?text=Percent+Review" alt="Percent review screenshot">
+    <div class="card" data-grade="7" data-standard="7.RP.A.2" data-type="mcas" id="mcas">
+      <div class="placeholder-img">Percent Review Screenshot</div>
       <div class="card-content">
         <h2>Percent Review</h2>
-        <span class="tag">Grade 7</span>
-        <span class="tag">7.RP.A.2</span>
-        <span class="tag">MCAS Review</span>
+        <div>
+          <span class="tag">Grade 7</span>
+          <span class="tag">7.RP.A.2</span>
+          <span class="tag">MCAS Review</span>
+        </div>
         <p>Practice with percent increase, percent decrease, discounts, and real-world problems.</p>
         <a class="button" href="#" target="_blank">Open Resource</a>
       </div>
     </div>
 
+  </section>
+
+  <h2 class="section-title" id="about">About</h2>
+
+  <section class="about-box">
+    <p>
+      I’m a middle school math teacher in Massachusetts creating interactive games,
+      worksheets, MCAS review resources, and classroom activities aligned to
+      Massachusetts standards.
+    </p>
   </section>
 
 </main>
@@ -239,7 +336,7 @@
 
       card.style.display =
         matchesSearch && matchesGrade && matchesStandard && matchesType
-          ? "block"
+          ? "flex"
           : "none";
     });
   }
